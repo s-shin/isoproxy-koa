@@ -16,7 +16,7 @@ module.exports = function(proxy) {
         return;
       }
       if (self.method == "POST" && self.path == path) {
-        resPromise = processJsonrpc(toObject(self.body));
+        resPromise = processJsonrpc(self.request.body);
       }
     });
     if (resPromise) {
@@ -26,13 +26,3 @@ module.exports = function(proxy) {
     yield* next;
   };
 };
-
-function toObject(body) {
-  var type = typeof body;
-  if (type == "object") {
-    return body;
-  }
-  if (type == "string") {
-    return JSON.parse(body);
-  }
-}

@@ -6,9 +6,12 @@
 
 ```js
 var koa = require("koa");
+var koaBodyParser = require("koa-bodyparser");
 var koaIsoProxy = require("koa-isoproxy");
 
 var app = koa();
+// koa-isoproxy depends on koa-bodyparser.
+app.use(koaBodyParser());
 app.use(koaIsoProxy(proxy));
 ```
 
