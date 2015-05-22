@@ -27,5 +27,10 @@
     "isoproxy": "^0.1.3",
     "koa": "^0.20.0",
     "koa-static": "^1.4.9"
-  }
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "index.js"
+  ]
 }
