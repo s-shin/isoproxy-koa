@@ -1,0 +1,31 @@
+{
+  "name": "koa-isoproxy",
+  "version": "0.1.0",
+  "description": "Koa middleware for IsoProxy.",
+  "main": "index.js",
+  "scripts": {
+    "build_example": "browserify example/client -o example/public/js/app.js",
+    "start_example": "node --harmony example/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/s-shin/koa-isoproxy.git"
+  },
+  "keywords": [
+    "koa",
+    "isomorphic"
+  ],
+  "author": "Shintaro Seki <s2pch.luck@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s-shin/koa-isoproxy/issues"
+  },
+  "homepage": "https://github.com/s-shin/koa-isoproxy",
+  "devDependencies": {
+    "browserify": "^10.2.1",
+    "isoproxy": "^0.1.3",
+    "koa": "^0.20.0",
+    "koa-static": "^1.4.9"
+  }
+}
