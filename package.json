@@ -1,6 +1,6 @@
 {
   "name": "koa-isoproxy",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Koa middleware for IsoProxy.",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/s-shin/koa-isoproxy",
   "devDependencies": {
     "browserify": "^10.2.1",
-    "isoproxy": "^0.1.3",
+    "isoproxy": "^0.2.0",
     "koa": "^0.20.0",
     "koa-bodyparser": "^2.0.0",
     "koa-logger": "^1.2.2",

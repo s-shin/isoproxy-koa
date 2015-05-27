@@ -8,19 +8,10 @@
  */
 module.exports = function(proxy) {
   return function *routeForIsoProxy(next) {
-    var self = this;
     var resPromise = null;
-    proxy.traverse(function(path, processJsonrpc) {
-      // Oops, cannot stop traversing naturally.
-      if (resPromise) {
-        return;
-      }
-      if (self.method == "POST" && self.path == path) {
-        resPromise = processJsonrpc(self.request.body);
-      }
-    });
-    if (resPromise) {
-      this.body = yield resPromise;
+    var processJsonrpcRequest = proxy.routes[this.path];
+    if (this.method === "POST" && processJsonrpcRequest) {
+      this.body = yield processJsonrpcRequest(this.request.body);
       return;
     }
     yield* next;
